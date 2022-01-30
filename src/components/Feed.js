@@ -17,7 +17,7 @@ export default class Feed extends Component {
 
     fetchMore() {
         const { url } = this.props;
-        const { next, results, keepRun } = this.state;
+        const { next, results } = this.state;
         fetch(url + "/post?pagenum=" + next, { credentials: 'same-origin' })
             .then((response) => {
                 return response.json();
@@ -25,7 +25,7 @@ export default class Feed extends Component {
             .then((data) => {
                 console.log(data);
                 this.setState({
-                    next: this.state.next += 1,
+                    next: next + 1,
                     results: results.concat(data),
                     keepRun: true,
                 });
@@ -37,7 +37,7 @@ export default class Feed extends Component {
     }
     
     render() {
-        const { next, results, keepRun } = this.state;
+        const { results, keepRun } = this.state;
 
         return (
             <InfiniteScroll
