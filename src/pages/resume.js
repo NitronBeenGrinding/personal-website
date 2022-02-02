@@ -1,19 +1,20 @@
 import React from 'react'
 import '../css/style.css';
+import resume from '../images/resume.pdf'
 
 const Resume = () => {
     return (
         <div>
-            <div className='section-basic section-t3'>
+            <div className='section-basic section-t1'>
                 <h1 class='section-title'>Resume - Abinav Sadhneni</h1>
                 <h3 class="section-subtitle">Incoming Google Software Engineer</h3>
                 <h3 class="section-subtitle">University of Michigan Class of '22</h3>
                 <h3 class="section-subtitle">Hometown: Troy, MI</h3>
             </div>
-            <div class='section-basic section-t4'>
+            <div class='section-basic section-t2'>
                 <div class='resume-formatting'>
                     <h3>Official Resume:</h3>
-                    <p>Download here.</p>
+                    <a href={resume}><p>Click to download.</p></a>
                     <h3 class="res-st">Contacts: </h3>
                     <p>Github: <a href="https://github.com/NitronBeenGrinding"> NitronBeenGrinding </a></p>
                     <p>LinkedIn: <a href="https://www.linkedin.com/in/abinav-sadhneni-b7184a1a1/"> Abinav Sadhneni</a></p>
@@ -28,12 +29,12 @@ const Resume = () => {
                             <li>EECS 281: Data Structures and Algorithms (C++)</li> 
                             <li>EECS 370: Computer Organization (C, ARM)</li> 
                             <li>EECS 376: Foundations of CS (P-NP Problems, Encryption, Deciders)</li>
-                            <li>EECS 445: Introduction to Machine Learning</li> 
+                            <li>EECS 445: Machine Learning (sklearn)</li> 
                             <li>EECS 481: Software Engineering (Ubuntu, Test coverage) </li>
                             <li>EECS 482: Intro to Operating Systems (OS, Memory)</li>
                             <li>EECS 485: Web Systems (HTML, Jinja2, Python) </li>
-                            <li>EECS 491: Introduction to Distributed Systems</li>
-                            <li>EECS 492: Intro to AI (Markov Models, NLP) </li>
+                            <li>EECS 491: Distributed Systems (GFS, MapReduce, PBService)</li>
+                            <li>EECS 492: Artificial Intellegence (Markov Models, NLP) </li>
                             <li>EECS 494: Computer Game Design & Development (Unity, C#)</li> 
                             <li>MATH 423: Mathematics in Finance (Option Pricing, Brownian Motion)</li>
                             <li>MATH 425: Intro to Probability (Random, Poisson Distributions) </li>

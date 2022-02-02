@@ -35,7 +35,7 @@ export default class Feed extends Component {
             })
             .catch((error) => console.log(error));
     }
-    
+
     render() {
         const { results, keepRun } = this.state;
 
@@ -44,8 +44,8 @@ export default class Feed extends Component {
                 dataLength={results.length}
                 hasMore={keepRun}
                 next={this.fetchMore}
-                loader={<p>Just wait a second lol</p>}
-                endMessage={<p>You have reached the end of the blog!</p>}
+                loader={ <p className='section-title'>Loading feed...</p>}
+                endMessage={<p className='section-title'>You have reached the end of the blog!</p>}
             >
                 {
                     results.map((eachpost) => (
